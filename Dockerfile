@@ -12,7 +12,7 @@ RUN echo "deb http://cran.univ-paris1.fr/bin/linux/debian stretch-cran34/" >> /e
 	libopenblas-dev \
 	r-base gdebi-core wget && \
 	pip install tensorflow && \
-	R -e "install.packages(c('shiny', 'keras','shinyWidgets', 'shinydashboard','rmarkdown' ), repos='https://cran.rstudio.com/')" && \
+	R -e "install.packages(c('shiny', 'keras','shinyWidgets', 'shinydashboard','rmarkdown','quandtmod' ), repos='https://cran.rstudio.com/')" && \
     	wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-12.04/x86_64/VERSION -O "version.txt" && \
     	VERSION=$(cat version.txt)  && \
     	wget --no-verbose "https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-12.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
